@@ -1,0 +1,62 @@
+{\rtf1\fbidis\ansi\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset163 Calibri;}{\f2\fnil\fcharset238 Calibri;}{\f3\fnil Calibri;}{\f4\fnil\fcharset1 DokChampa;}{\f5\fnil\fcharset1 Calibri;}{\f6\fnil\fcharset1 Raavi;}}
+{\colortbl ;\red243\green164\blue71;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\qc\b\f0\fs28\lang9 Bi\f1\lang1066\u7871?n l\f0\lang1033\'e0 g\'ec?\b0\par
+
+\pard\sa200\sl276\slmult1 Trong qu\'e1 tr\'ecnh x\'e2y d\f1\lang1066\u7921?ng website ho\u7863?c c\f0\lang1033\'e1c \f1\lang1066\u7913?ng d\u7909?ng v\u7899?i Javascript ch\f0\lang1033\'fang ta s\f1\lang1066\u7869? c\u7847?n ph\u7843?i l\f0\lang1033\'e0m vi\f1\lang1066\u7879?c v\u7899?i c\f0\lang1033\'e1c d\f1\lang1066\u7841?ng th\f0\lang1033\'f4ng tin d\f1\lang1066\u7919? li\u7879?u kh\f0\lang1033\'e1c nhau. V\'ed d\f1\lang1066\u7909?:\par
+\f0\lang1033\tab 1. \f1\lang1066 Ph\u7847?n m\u7873?m k\u7871? to\f0\lang1033\'e1n - Ch\'fang ta s\f1\lang1066\u7869? l\f0\lang1033\'e0m vi\f1\lang1066\u7879?c v\u7899?i nh\u7919?ng con s\u7889?\par
+\f0\lang1033\tab 2. \f1\lang1066 Website b\f0\lang1033\'e1n h\'e0ng - L\'e0m vi\f1\lang1066\u7879?c v\u7899?i d\u7919? li\u7879?u th\f0\lang1033\'f4ng tin s\f1\lang1066\u7843?n ph\u7849?m, \f2\'f0\u417?n h\f0\lang1033\'e0ng v\'e0 gi\f1\lang1066\u7887? h\f0\lang1033\'e0ng\par
+\tab 3. \f1\lang1066\u7912?ng d\u7909?ng Chat - D\u7919? li\u7879?u l\f0\lang1033\'e0 nh\f1\lang1066\u7919?ng \f2\'f0o\f1\u7841?n chat, tin nh\u7855?n, th\f0\lang1033\'f4ng tin ng\f2\u432?\f1\lang1066\u7901?i chat\par
+\cf1\b Bi\u7871?n \f2\'f0\u432?\f1\u7907?c s\u7917? d\u7909?ng \f2\'f0\f1\u7875? l\f2\u432?u tr\f1\u7919? c\f0\lang1033\'e1c th\'f4ng tin tr\'ean trong qu\'e1 tr\'ecnh \f1\lang1066\u7913?ng d\u7909?ng Javascript ho\u7841?t \f2\'f0\f1\u7897?ng.\par
+\cf0\b0\par
+\b Khai b\f0\lang1033\'e1o bi\f1\lang1066\u7871?n\b0\par
+\f2\'d0\f1\u7875? khai b\f0\lang1033\'e1o bi\f1\lang1066\u7871?n ta s\u7869? b\u7855?t \f2\'f0\f1\u7847?u b\u7857?ng t\u7915? kh\f0\lang1033\'f3a var (var l\'e0 vi\f1\lang1066\u7871?t t\u7855?t c\u7911?a t\u7915? variable - ngh\f2\u297?a l\f0\lang1033\'e0 bi\f1\lang1066\u7871?n). Khai b\f0\lang1033\'e1o bi\f1\lang1066\u7871?n c\f0\lang1033\'f3 c\'fa ph\'e1p nh\f2\u432? sau:\par
+\i var [d\f1\lang1066\u7845?u c\f0\lang1033\'e1ch] [t\'ean bi\f1\lang1066\u7871?n];\par
+\cf1\b\i0 Khi \f2\'f0o\f1\u7841?n m\f0\lang1033\'e3 tr\'ean \f2\'f0\u432?\f1\lang1066\u7907?c ch\u7841?y (th\u7921?c thi) Javascript s\u7869? t\u7841?o bi\u7871?n v\u7899?i t\f0\lang1033\'ean fullName v\'e0 g\'e1n gi\'e1 tr\f1\lang1066\u7883? 'S\f2\u417?n \'d0\f1\u7863?ng' cho bi\u7871?n n\f0\lang1033\'e0y. M\f1\lang1066\u7897?t v\f0\lang1033\'f9ng nh\f1\lang1066\u7899? trong RAM c\u7911?a m\f0\lang1033\'e1y t\'ednh s\f1\lang1066\u7869? \f2\'f0\u432?\f1\u7907?c s\u7917? d\u7909?ng \f2\'f0\f1\u7875? ph\u7909?c v\u7909? vi\u7879?c l\f2\u432?u tr\f1\u7919? nh\u7919?ng gi\f0\lang1033\'e1 tr\f1\lang1066\u7883? c\u7911?a bi\u7871?n khi ch\f2\u432?\u417?ng tr\f0\lang1033\'ecnh \f2\'f0\u432?\f1\lang1066\u7907?c th\u7921?c thi.\cf0\b0\par
+\f2\'d0\f1\u7875? \f2\'f0\u417?n gi\f1\u7843?n v\f0\lang1033\'e0 ng\f1\lang1066\u7855?n g\u7885?n, ta c\f0\lang1033\'f3 th\f1\lang1066\u7875? k\u7871?t h\u7907?p vi\u7879?c khai b\f0\lang1033\'e1o bi\f1\lang1066\u7871?n v\f0\lang1033\'e0 g\'e1n gi\'e1 tr\f1\lang1066\u7883? cho bi\u7871?n th\f0\lang1033\'e0nh m\f1\lang1066\u7897?t d\f0\lang1033\'f2ng:\par
+\i var fullName = 'S\f2\u417?n \'d0\f1\lang1066\u7863?ng'; // khai b\f0\lang1033\'e1o v\'e0 g\'e1n gi\'e1 tr\f1\lang1066\u7883?\par
+alert(fullName);\par
+\i0\par
+Ta c\f2\u361?ng c\f0\lang1033\'f3 th\f1\lang1066\u7875? khai b\f0\lang1033\'e1o nhi\f1\lang1066\u7873?u bi\u7871?n trong c\f0\lang1033\'f9ng m\f1\lang1066\u7897?t d\f0\lang1033\'f2ng c\'e1ch nhau b\f1\lang1066\u7903?i d\u7845?u , nh\f2\u432? sau:\par
+\i var fullName = 'S\u417?n \'d0\f1\u7863?ng', age = 18, workAt = 'F8';\par
+\i0 Tr\f0\lang1033\'f4ng c\'f3 v\f1\lang1066\u7867? ng\u7855?n g\u7885?n, tuy nhi\f0\lang1033\'ean m\'ecnh khuy\'ean c\'e1c b\f1\lang1066\u7841?n kh\f0\lang1033\'f4ng n\'ean d\'f9ng c\'e1ch n\'e0y. Khi c\f1\lang1066\u7847?n khai b\f0\lang1033\'e1o nhi\f1\lang1066\u7873?u bi\u7871?n h\f2\u417?n th\f0\lang1033\'ec c\'e1ch n\'e0y tr\f1\lang1066\u7903? n\f0\lang1033\'ean r\f1\lang1066\u7845?t kh\f0\lang1033\'f3 \f2\'f0\f1\lang1066\u7885?c.\par
+Ta n\f0\lang1033\'ean khai b\'e1o bi\f1\lang1066\u7871?n tr\f0\lang1033\'ean m\f1\lang1066\u7895?i d\f0\lang1033\'f2ng kh\'e1c nhau \f2\'f0\f1\lang1066\u7875? d\u7877? \f2\'f0\f1\u7885?c h\f2\u417?n (n\f0\lang1033\'ean d\'f9ng c\'e1ch n\'e0y):\par
+\i var fullName = 'S\f2\u417?n \'d0\f1\lang1066\u7863?ng';\par
+var age = 18;\par
+var workAt = 'F8';\par
+\par
+\i0 M\u7897?t s\u7889? c\f0\lang1033\'e1ch khai b\'e1o bi\f1\lang1066\u7871?n tr\f0\lang1033\'ean nhi\f1\lang1066\u7873?u d\f0\lang1033\'f2ng kh\'e1c nh\f2\u432? sau:\par
+\i var fullName = 'S\u417?n \'d0\f1\lang1066\u7863?ng',\par
+    age = 18,\par
+    workAt = 'F8';\par
+\par
+\i0 Th\u7853?m ch\f0\lang1033\'ed c\'f3 c\f1\lang1066\u7843? phong c\f0\lang1033\'e1ch sau:\par
+\i var fullName = 'S\f2\u417?n \'d0\f1\lang1066\u7863?ng'\par
+    , age = 18\par
+    , workAt = 'F8';\par
+\i0 V\u7873? m\u7863?t k\u7929? thu\u7853?t th\f0\lang1033\'ec t\f1\lang1066\u7845?t c\u7843? c\f0\lang1033\'e1c c\'e1ch \f2\'f0\f1\lang1066\u7873?u t\f2\u432?\u417?ng t\f1\u7921? nhau. V\f0\lang1033\'ec v\f1\lang1066\u7853?y d\f0\lang1033\'f9ng c\'e1ch n\'e0o l\'e0 t\'f9y theo s\f1\lang1066\u7903? th\f0\lang1033\'edch c\f1\lang1066\u7911?a b\u7841?n.\par
+\par
+\b\f0\lang1033 Quy t\f1\lang1066\u7855?c \f2\'f0\f1\u7863?t t\f0\lang1033\'ean\b0\par
+T\'ean bi\f1\lang1066\u7871?n c\f0\lang1033\'f3 th\f1\lang1066\u7875? bao g\u7891?m \cf1\b ch\u7919? c\f0\lang1033\'e1i, s\f1\lang1066\u7889?, d\u7845?u g\u7841?ch d\f2\u432?\f1\u7899?i ( _ ) v\f0\lang1033\'e0 k\'ed t\f1\lang1066\u7921? \f2\'f0\f0\lang1033\'f4 la ( $ )\par
+\cf0\b0 T\'ean bi\f1\lang1066\u7871?n kh\f0\lang1033\'f4ng th\f1\lang1066\u7875? b\u7855?t \f2\'f0\f1\u7847?u b\u7857?ng s\u7889?, ph\u7843?i b\u7855?t \f2\'f0\f1\u7847?u b\u7857?ng m\u7897?t ch\u7919? c\f0\lang1033\'e1i ho\f1\lang1066\u7863?c d\u7845?u g\u7841?ch d\f2\u432?\f1\u7899?i ho\u7863?c d\u7845?u \f2\'f0\f0\lang1033\'f4 la\par
+\cf1\b T\'ean bi\f1\lang1066\u7871?n ph\f0\lang1033\'e2n bi\f1\lang1066\u7879?t ch\u7919? hoa v\f0\lang1033\'e0 ch\f1\lang1066\u7919? th\f2\u432?\f1\u7901?ng\cf0\b0 . V\f0\lang1033\'ec v\f1\lang1066\u7853?y tenbien v\f0\lang1033\'e0 TenBien l\'e0 2 bi\f1\lang1066\u7871?n kh\f0\lang1033\'e1c nhau\par
+T\'ean bi\f1\lang1066\u7871?n kh\f0\lang1033\'f4ng \f2\'f0\u432?\f1\lang1066\u7907?c (kh\f0\lang1033\'f4ng th\f1\lang1066\u7875?) \f2\'f0\f1\u7863?t tr\f0\lang1033\'f9ng v\f1\lang1066\u7899?i c\f0\lang1033\'e1c t\f1\lang1066\u7915? kh\f0\lang1033\'f3a c\f1\lang1066\u7911?a Javascript\par
+T\u7915? kh\f0\lang1033\'f3a l\'e0 nh\f1\lang1066\u7919?ng t\u7915? \f2\'f0\u432?\f1\u7907?c Javascript s\u7917? d\u7909?ng \f2\'f0\f1\u7875? t\u7841?o n\f0\lang1033\'ean nh\f1\lang1066\u7919?ng quy chu\u7849?n v\u7873? m\u7863?t ch\u7913?c n\f2\'e3ng v\f0\lang1033\'e0 c\'fa ph\'e1p trong Javascript. V\'ed d\f1\lang1066\u7909?: \f2\'d0\f1\u7875? khai b\f0\lang1033\'e1o m\f1\lang1066\u7897?t bi\u7871?n ta s\u7869? s\u7917? d\u7909?ng t\u7915? kh\f0\lang1033\'f3a var. V\'ec v\f1\lang1066\u7853?y ta kh\f0\lang1033\'f4ng th\f1\lang1066\u7875? \f2\'f0\f1\u7863?t t\f0\lang1033\'ean bi\f1\lang1066\u7871?n l\f0\lang1033\'e0 \f3\ldblquote\f0 var\f3\rdblquote\f0\par
+\par
+V\'ed d\f1\lang1066\u7909? cho t\f0\lang1033\'ean bi\f1\lang1066\u7871?n h\u7907?p l\u7879?\par
+\i var address; // t\f0\lang1033\'ean bi\f1\lang1066\u7871?n s\u7917? d\u7909?ng ch\u7919? c\f0\lang1033\'e1i\par
+var first_name; // k\f1\lang1066\u7871?t h\u7907?p ch\u7919? c\f0\lang1033\'e1i v\'e0 g\f1\lang1066\u7841?ch d\f2\u432?\f1\u7899?i\par
+var $last_name; // d\u7845?u \f2\'f0\f0\lang1033\'f4 la, g\f1\lang1066\u7841?ch d\f2\u432?\f1\u7899?i v\f0\lang1033\'e0 ch\f1\lang1066\u7919? c\f0\lang1033\'e1i\par
+var f8; // ch\f1\lang1066\u7919? c\f0\lang1033\'e1i v\'e0 s\f1\lang1066\u7889?, s\u7889? \f2\'f0\f1\u7913?ng sau ch\u7919? c\f0\lang1033\'e1i\par
+\i0\par
+V\'ed d\f1\lang1066\u7909? cho t\f0\lang1033\'ean bi\f1\lang1066\u7871?n kh\f0\lang1033\'f4ng h\f1\lang1066\u7907?p l\u7879?\par
+\i var java-script; // bao g\u7891?m d\u7845?u g\u7841?ch ngang\i0\par
+\i var 8f; // b\u7855?t \f2\'f0\f1\u7847?u v\u7899?i ch\u7919? s\u7889?\i0\par
+\i var var = 'Bi\u7871?n'; // s\u7917? d\u7909?ng tr\f0\lang1033\'f9ng t\f1\lang1066\u7915? kh\f0\lang1033\'f3a `var`\par
+\i0\par
+C\'e1c ch\f1\lang1066\u7919? c\f0\lang1033\'e1i kh\'f4ng ph\f1\lang1066\u7843?i ti\u7871?ng Lating v\u7851?n c\f0\lang1033\'f3 th\f1\lang1066\u7875? \f2\'f0\u432?\f1\u7907?c s\u7917? d\u7909?ng l\f0\lang1033\'e0m t\'ean bi\f1\lang1066\u7871?n (kh\f0\lang1033\'f4ng s\f1\lang1066\u7917? d\u7909?ng c\f0\lang1033\'e1ch n\'e0y):\par
+var \f4\lang1108\u3732?\u3785?\u3762?\u3737?\u3751?\u3764?\u3722?\u3762?\u3713?\u3762?\u3737?\f5  \f0\lang1033 = '...'; // ti\f1\lang1066\u7871?ng Ph\f0\lang1033\'e1p\par
+var \f6\lang1094\u2596?\u2581?\u2600?\u2624?\u2581?\u2624? = '...'; // \f0\lang1033 ti\f1\lang1066\u7871?ng L\f0\lang1033\'e0o\par
+Trong th\f1\lang1066\u7921?c t\u7871? ch\f0\lang1033\'fang ta s\f1\lang1066\u7869? s\u7917? d\u7909?ng ti\u7871?ng Anh \f2\'f0\f1\u7875? \f2\'f0\f1\u7863?t t\f0\lang1033\'ean bi\f1\lang1066\u7871?n v\f0\lang1033\'ec \f2\'f0\f0\'f3 l\'e0 quy \f2\u432?\f1\lang1066\u7899?c chung Qu\u7889?c T\u7871?.\f0\lang9\par
+}
+ 

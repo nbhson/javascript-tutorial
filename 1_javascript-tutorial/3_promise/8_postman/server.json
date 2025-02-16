@@ -1,0 +1,29 @@
+{
+  "coures": [
+    {
+      "id": 1,
+      "name": "HTML",
+      "description": "HTML cơ bản"
+    },
+    {
+      "id": 2,
+      "name": "CSS",
+      "description": "CSS cơ bản"
+    },
+    {
+      "id": 3,
+      "name": "JS",
+      "description": "JS cơ bản"
+    },
+    {
+      "id": 4,
+      "name": "PHP",
+      "description": "PHP Cơ bản"
+    },
+    {
+      "name": "Laravel",
+      "description": "Laravel cơ bản",
+      "id": 5
+    }
+  ]
+}
