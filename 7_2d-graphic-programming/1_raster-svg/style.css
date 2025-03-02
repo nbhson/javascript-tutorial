@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 32px;
+}
+
+.container .svg ,
+.container .raster {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 600;
+}
+
+.container .svg span,
+.container .raster span {
+    margin-bottom: 8px;
+}
+
+.container .svg__image {
+    width: 150px;
+}
+.container .raster__image {
+    width: 150px;
+}

@@ -1,0 +1,23 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+#taskInput {
+  width: 60%;
+  padding: 8px;
+  margin: 10px;
+}
+#addTaskBtn {
+  padding: 8px;
+  cursor: pointer;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  margin: 8px 0;
+  padding: 8px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
