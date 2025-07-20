@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garbage Collection Demo</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .info-box {
+            background: #e8f4fd;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .success-box {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .console {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.5;
+            max-height: 500px;
+            overflow-y: auto;
+            margin: 20px 0;
+        }
+        
+        .controls {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 0 10px;
+            transition: background 0.3s;
+        }
+        
+        button:hover {
+            background: #2980b9;
+        }
+        
+        button:disabled {
+            background: #bdc3c7;
+            cursor: not-allowed;
+        }
+        
+        .memory-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .memory-card {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            border: 1px solid #dee2e6;
+        }
+        
+        .memory-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .memory-label {
+            color: #6c757d;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        
+        .section {
+            margin: 30px 0;
+            padding: 20px;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+        }
+        
+        .section h3 {
+            color: #495057;
+            margin-top: 0;
+        }
+        
+        pre {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            border: 1px solid #e9ecef;
+        }
+        
+        code {
+            background: #f1f3f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Garbage Collection trong JavaScript</h1>
+        
+        <div class="info-box">
+            <strong>💡 Garbage Collection là gì?</strong><br>
+            Là quá trình tự động thu hồi bộ nhớ của các đối tượng không còn được sử dụng trong JavaScript.
+        </div>
+        
+        <div class="controls">
+            <button onclick="runDemo()">▶️ Chạy Demo</button>
+            <button onclick="clearConsole()">🗑️ Xóa Console</button>
+            <button onclick="forceGC()" id="gcBtn" disabled>🔄 Force GC</button>
+        </div>
+        
+        <div class="memory-info" id="memoryInfo" style="display: none;">
+            <div class="memory-card">
+                <div class="memory-value" id="usedMemory">0</div>
+                <div class="memory-label">Used Memory (MB)</div>
+            </div>
+            <div class="memory-card">
+                <div class="memory-value" id="totalMemory">0</div>
+                <div class="memory-label">Total Memory (MB)</div>
+            </div>
+            <div class="memory-card">
+                <div class="memory-value" id="limitMemory">0</div>
+                <div class="memory-label">Memory Limit (MB)</div>
+            </div>
+        </div>
+        
+        <div class="console" id="console"></div>
+        
+        <div class="section">
+            <h3>📚 Các khái niệm chính</h3>
+            <ul>
+                <li><strong>Mark and Sweep:</strong> Thuật toán chính của JavaScript để thu hồi bộ nhớ</li>
+                <li><strong>Reference Counting:</strong> Cách tiếp cận cũ (có vấn đề với circular references)</li>
+                <li><strong>Memory Leaks:</strong> Bộ nhớ không được giải phóng do lỗi lập trình</li>
+                <li><strong>Weak References:</strong> Tham chiếu yếu cho phép GC thu hồi object</li>
+            </ul>
+        </div>
+        
+        <div class="section">
+            <h3>⚠️ Memory Leaks thường gặp</h3>
+            <div class="warning-box">
+                <strong>1. Global Variables:</strong> Biến toàn cục không được khai báo đúng cách
+            </div>
+            <div class="warning-box">
+                <strong>2. Event Listeners:</strong> Không remove event listeners khi không cần thiết
+            </div>
+            <div class="warning-box">
+                <strong>3. Closures:</strong> Giữ tham chiếu đến data lớn trong closure
+            </div>
+        </div>
+        
+        <div class="section">
+            <h3>✅ Best Practices</h3>
+            <div class="success-box">
+                <strong>1. Sử dụng local variables:</strong> Biến cục bộ sẽ tự động được GC
+            </div>
+            <div class="success-box">
+                <strong>2. Cleanup resources:</strong> Xóa event listeners, clear arrays, null references
+            </div>
+            <div class="success-box">
+                <strong>3. Object pooling:</strong> Tái sử dụng objects thay vì tạo mới liên tục
+            </div>
+            <div class="success-box">
+                <strong>4. WeakMap/WeakSet:</strong> Sử dụng weak references khi cần cache
+            </div>
+        </div>
+        
+        <div class="section">
+            <h3>🔧 Monitoring Tools</h3>
+            <p>Để theo dõi memory usage và GC:</p>
+            <ul>
+                <li><strong>Chrome DevTools:</strong> Memory tab, Performance tab</li>
+                <li><strong>Node.js:</strong> <code>process.memoryUsage()</code>, <code>v8.getHeapStatistics()</code></li>
+                <li><strong>Browser API:</strong> <code>performance.memory</code></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="garbage-collection-examples.js"></script>
+    <script>
+        let originalConsoleLog = console.log;
+        let consoleOutput = [];
+        
+        // Override console.log to capture output
+        console.log = function(...args) {
+            originalConsoleLog.apply(console, args);
+            const message = args.map(arg => 
+                typeof arg === 'object' ? JSON.stringify(arg, null, 2) : String(arg)
+            ).join(' ');
+            consoleOutput.push(message);
+            updateConsole();
+        };
+        
+        function updateConsole() {
+            const consoleElement = document.getElementById('console');
+            consoleElement.innerHTML = consoleOutput.map(msg => 
+                `<div>${msg}</div>`
+            ).join('');
+            consoleElement.scrollTop = consoleElement.scrollHeight;
+        }
+        
+        function clearConsole() {
+            consoleOutput = [];
+            updateConsole();
+        }
+        
+        function updateMemoryInfo() {
+            if (performance && performance.memory) {
+                const memory = performance.memory;
+                document.getElementById('usedMemory').textContent = 
+                    (memory.usedJSHeapSize / 1024 / 1024).toFixed(2);
+                document.getElementById('totalMemory').textContent = 
+                    (memory.totalJSHeapSize / 1024 / 1024).toFixed(2);
+                document.getElementById('limitMemory').textContent = 
+                    (memory.jsHeapSizeLimit / 1024 / 1024).toFixed(2);
+                document.getElementById('memoryInfo').style.display = 'grid';
+            }
+        }
+        
+        function runDemo() {
+            clearConsole();
+            console.log("🚀 Bắt đầu chạy Garbage Collection Demo...\n");
+            
+            // Run the demo from the external file
+            // The demo code is already loaded from garbage-collection-examples.js
+            
+            // Enable GC button if available
+            if (typeof gc === 'function') {
+                document.getElementById('gcBtn').disabled = false;
+            }
+            
+            // Update memory info
+            updateMemoryInfo();
+            
+            // Update memory info periodically
+            setInterval(updateMemoryInfo, 1000);
+        }
+        
+        function forceGC() {
+            if (typeof gc === 'function') {
+                console.log("🔄 Forcing Garbage Collection...");
+                gc();
+                console.log("✅ Garbage Collection completed");
+                updateMemoryInfo();
+            } else {
+                console.log("❌ Force GC not available. Use --expose-gc flag in Node.js");
+            }
+        }
+        
+        // Auto-run demo when page loads
+        window.addEventListener('load', function() {
+            setTimeout(runDemo, 1000);
+        });
+    </script>
+</body>
+</html> 
